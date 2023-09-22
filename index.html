@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login SignUp Form</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        :root {
+            --mainContainer: 50%
+        }
+
+        #container--1 {
+            background-color: rgb(21, 21, 61);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainContainer {
+            width: var(--mainContainer);
+            height: 50vh;
+            box-shadow: 0px 0px 50px 10px rgb(219, 205, 205);
+        }
+
+        .contentContainer {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: wrap;
+            background-color: rgb(144, 120, 255);
+        }
+
+        .loginContainer,
+        .signUpContainer,
+        .infoContainer {
+            height: 100%;
+            width: 50%;
+            background-color: rgb(32, 22, 78);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .infoContainer {
+            background-color: rgb(25, 25, 40);
+            position: relative;
+            bottom: 100%;
+        }
+
+        .infoContainerLeft {
+            left: 0px;
+            box-shadow: -20px 0px 20px 20px rgb(46, 43, 43);
+            transition: all 1s ease-in-out;
+        }
+
+        .infoContainerRight {
+            left: 50%;
+            box-shadow: 20px 0px 20px 20px rgb(46, 43, 43);
+            transition: all 1s ease-in-out;
+        }
+
+        .infomation {
+            font-size: 1.5rem;
+            color: white;
+            text-align: justify;
+            padding: 0px 20px;
+        }
+
+        .inputContainer {
+            padding: 10px;
+
+        }
+
+        .inputLabel {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        input {
+            font-size: 1.5rem;
+            width: 100%;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .submitButton {
+            padding: 10px 20px;
+            font-size: 1.3rem;
+            border-radius: 20px;
+            font-weight: bold;
+            position: relative;
+            top: 20px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container--1">
+        <div class="mainContainer">
+            <div class="contentContainer">
+                <div class="loginContainer">
+
+                    <div class="inputContainer">
+                        <p class="inputLabel">Username</p>
+                        <input type="text">
+                    </div>
+
+                    <div class="inputContainer">
+                        <p class="inputLabel">Password</p>
+                        <input type="password">
+                    </div>
+
+                    <div class="inputContainer">
+                        <button class="submitButton"> Login </button>
+                    </div>
+
+                </div>
+                <div class="signUpContainer">
+
+                    <div class="inputContainer">
+                        <p class="inputLabel">Email</p>
+                        <input type="email">
+                    </div>
+
+                    <div class="inputContainer">
+                        <p class="inputLabel">Username</p>
+                        <input type="text">
+                    </div>
+
+                    <div class="inputContainer">
+                        <p class="inputLabel">Password</p>
+                        <input type="password">
+                    </div>
+
+                    <div class="inputContainer">
+                        <button class="submitButton"> Login </button>
+                    </div>
+
+
+                </div>
+
+                <div class="infoContainer infoContainerRight">
+                    <p class="infomation">
+                        The login feature is a sleek gateway to personalized access, with minimalistic fields ready to
+                        unlock a world of possibilities. In contrast, the signup feature is an inviting path to new
+                        beginnings, offering a user-friendly, form-filling experience that promises a seamless journey
+                        ahead.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
