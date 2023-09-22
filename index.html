@@ -12,7 +12,21 @@
         }
 
         :root {
-            --mainContainer: 50%
+            --mainContainerWidth: 50%;
+            --mainContainerHeight: 50%;
+            --mainContainerShadow: 0px 0px 50px 10px rgb(219, 205, 205);
+
+            --informationFontSize: 1.5rem;
+
+            --inputLabelFontSize: 1.5rem;
+
+            --inputFontSize: 1.5rem;
+            --inputPadding: 10px;
+
+            --submitButtonFontSize: 1.3rem;
+            --submitButtonpadding: 10px 40px;
+
+
         }
 
         #container--1 {
@@ -24,9 +38,9 @@
         }
 
         .mainContainer {
-            width: var(--mainContainer);
-            height: 50vh;
-            box-shadow: 0px 0px 50px 10px rgb(219, 205, 205);
+            width: var(--mainContainerWidth);
+            height: var(--mainContainerHeight);
+            box-shadow: var(--mainContainerShadow);
         }
 
         .contentContainer {
@@ -68,7 +82,7 @@
         }
 
         .infomation {
-            font-size: 1.5rem;
+            font-size: var(--informationFontSize);
             color: white;
             text-align: justify;
             padding: 0px 20px;
@@ -81,24 +95,77 @@
 
         .inputLabel {
             color: white;
-            font-size: 1.5rem;
+            font-size: var(--inputLabelFontSize);
             text-align: center;
         }
 
         input {
-            font-size: 1.5rem;
-            width: 100%;
+            font-size: var(--inputFontSize);
             border-radius: 20px;
-            padding: 10px;
+            padding: var(--inputPadding);
         }
 
         .submitButton {
-            padding: 10px 20px;
-            font-size: 1.3rem;
+            padding: var(--submitButtonpadding);
+            font-size: var(--submitButtonFontSize);
             border-radius: 20px;
-            font-weight: bold;
+            font-weight: bolder;
             position: relative;
             top: 20px
+        }
+
+        @media screen and (max-width: 1100px) {
+            :root {
+                --mainContainerWidth: 60%;
+                --mainContainerHeight: 60%;
+                --mainContainerShadow: 0px 0px 50px 10px rgb(219, 205, 205);
+
+                --informationFontSize: 1.3rem;
+
+                --inputLabelFontSize: 1.2rem;
+
+                --inputFontSize: 1.2rem;
+                --inputPadding: 8px;
+
+                --submitButtonFontSize: 1.2rem;
+                --submitButtonpadding: 8px 40px;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            :root {
+                --mainContainerWidth: 70%;
+                --mainContainerHeight: 70%;
+                --mainContainerShadow: 0px 0px 50px 10px rgb(219, 205, 205);
+
+                --informationFontSize: 1.2rem;
+
+                --inputLabelFontSize: 1.1rem;
+
+                --inputFontSize: 1.1rem;
+                --inputPadding: 7px;
+
+                --submitButtonFontSize: 1.1rem;
+                --submitButtonpadding: 8px 40px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            :root {
+                --mainContainerWidth: 90%;
+                --mainContainerHeight: 80%;
+                --mainContainerShadow: 0px 0px 50px 10px rgb(219, 205, 205);
+
+                --informationFontSize: 1.1rem;
+
+                --inputLabelFontSize: 1rem;
+
+                --inputFontSize: 1rem;
+                --inputPadding: 7px;
+
+                --submitButtonFontSize: 1rem;
+                --submitButtonpadding: 8px 40px;
+            }
         }
     </style>
 </head>
@@ -144,7 +211,6 @@
                     <div class="inputContainer">
                         <button class="submitButton"> Login </button>
                     </div>
-
 
                 </div>
 
